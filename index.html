@@ -204,7 +204,7 @@ body{margin:0;font-family:Inter, 'Segoe UI', Times New Roman, Bell MT, sans-seri
         </div>
       </div>
 
-      <img class="invite-image" src="Conejos img/invitacion.png" alt="Mailany" />
+      <img class="invite-image" src="Conejos img/_Invitación .png" alt="Mailany" />
     </div>
 
     <!-- animales -->
@@ -558,7 +558,7 @@ window.addEventListener("load", () => {
    📄 BOTÓN DESCARGAR PDF (html2canvas + jsPDF)
    ========================================================= */
 
-const pdfBtn = document.getElementById('pdf/invitacion.pdf');
+const pdfBtn = document.getElementById('pdf/_Invitación .pdf');
 if(pdfBtn){
   pdfBtn.addEventListener('click', async ()=>{
     // Indica visualmente que está creando el PDF
@@ -567,14 +567,14 @@ if(pdfBtn){
       const element = document.body;
       // html2canvas
       const canvas = await html2canvas(element, {scale: 1.2, useCORS:true, allowTaint:true});
-      const imgData = canvas.toDataURL('pdf/invitacion.pdf');
+      const imgData = canvas.toDataURL('pdf/_Invitación .pdf');
       const { jsPDF } = window.jspdf;
       const pdf = new jsPDF('p','mm','a4');
       const pageWidth = pdf.internal.pageSize.getWidth();
       const imgWidth = pageWidth;
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
       pdf.addImage(imgData,'PNG',0,0,imgWidth,imgHeight);
-      pdf.save('pdf/invitacion.pdf');
+      pdf.save('pdf/_Invitación .pdf');
     }catch(e){
       console.error(e);
       alert('Error al generar PDF. Intenta usar otro navegador o revisar las imágenes externas.');
@@ -711,7 +711,7 @@ if(!audioUnlocked) audioPrompt.style.display = 'block';
   // Descargar PDF actualizado
   document.getElementById("download-pdf").addEventListener("click", function () {
     const link = document.createElement("a");
-    link.href = "pdf/invitacion.pdf"; // Nuevo nombre del PDF
+    link.href = "pdf/_Invitación .pdf"; // Nuevo nombre del PDF
     link.download = "Invitación.pdf"; // Nombre sugerido al descargar
     document.body.appendChild(link);
     link.click();
